@@ -1,4 +1,4 @@
-# Express API Starter with Typescript
+# CRUD REST API for parsing data from the site hh.ru
 
 How to use this template:
 
