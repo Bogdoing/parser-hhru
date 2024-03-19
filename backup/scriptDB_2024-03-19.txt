@@ -1,0 +1,80 @@
+-- +
+select * from git
+
+select * from hh
+where region = '113'
+
+-- +
+select * from hh 
+where lang = 'php'
+
+-- +
+select * from hh 
+where data = '2024-03-19'
+
+-- -
+SELECT lang, vac, CAST(res AS numeric) / vac AS results 
+FROM hh 
+WHERE data = '2024-03-03' AND region = '113'
+--ORDER BY vac DESC;
+ORDER BY results;
+
+-- +
+select * from hh 
+where lang = 'Dart' and region = '113'
+order by data  
+
+-- +
+select * from hh 
+where lang = 'Dart' and data = '2024-01-10'
+
+--drop table hh
+--CREATE TABLE hh (
+--  id SERIAL PRIMARY KEY,
+--  lang VARCHAR(255),
+--  vac INT,
+--  vacRef VARCHAR(255),
+--  res VARCHAR(255),
+--  region VARCHAR(255),
+--  data DATE
+--);
+--INSERT INTO hh (lang, vac, vacRef, res, region, data) 
+--VALUES 
+--(
+--	'Ruby', 1400000, 'Vacancy Ref', 'Result', 'Region', '2024-02-28'
+--);
+
+---
+-- +
+select distinct data from git
+where data = '2024-01-11'
+
+-- +
+select * from git
+where lang = 'Php'
+order by data
+
+-- +
+select * from git
+where data = '2024-01-11' and lang = 'Php'
+
+-- -
+select * from git
+where data >= '2024-01-11' and data <= '2024-01-18'
+and lang = 'Php'
+
+---
+--CREATE TABLE git ( 
+--	id SERIAL PRIMARY KEY, 
+--	count INTEGER, 
+--	lang VARCHAR(150), 
+--	data DATE 
+--);
+--
+--drop table git
+--
+--INSERT INTO data_records (count, lang, data) 
+--VALUES (
+--	1400000, 'Ruby', '2024-02-28'
+--);
+
