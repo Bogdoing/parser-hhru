@@ -17,6 +17,20 @@ const HHController = {
             return { error }
         }
     },
+    getAllData: async(): Promise<{}>  => {
+        try {
+            const { rows } = await postgre.query(`
+                select DISTINCT data from hh 
+                order by data`, [])
+
+            if (rows[0]) { return { rows } }
+
+            return { msg: "not found" }
+
+        } catch (error) {
+            return { error }
+        }
+    },
     getData: async(data: string): Promise<{}>  => {
         try {
             const { rows } = await postgre.query(`select * from hh where data = $1`, [data])
@@ -76,6 +90,23 @@ const HHController = {
                 select * from hh 
                 where lang = $1 and data = $2`, 
                 [lang, data]
+            )
+
+            if (rows[0]) { return { rows } }
+
+            return { msg: "not found" }
+
+        } catch (error) {
+            return { error }
+        }
+    },
+    getDataRegion: async(data: string, region: string): Promise<{}>  => {
+        try {
+            const { rows } = await postgre.query(`
+
+                select * from hh 
+                where data = $1 and  region = $2`, 
+                [data, region]
             )
 
             if (rows[0]) { return { rows } }

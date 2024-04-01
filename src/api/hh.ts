@@ -8,14 +8,24 @@ router.get('/', async (req, res) => {
     res.json(await HHController.getAll())
 });
 
+router.get('/allData', async (req, res) => {
+    res.json(await HHController.getAllData())
+});
+
 router.get('/data/:data', async (req, res) => {
     const data = req.params.data
     res.json(await HHController.getData(data))
+    // res.json(data)
 });
 
 router.get('/lang/:lang', async (req, res) => {
     const data = req.params.lang
     res.json(await HHController.getLang(data))
+});
+
+router.get('/region/:region', async (req, res) => {
+    const data = req.params.region
+    res.json(await HHController.getRegion(data))
 });
 
 router.get('/langRegion/:lang/:region', async (req, res) => {
@@ -28,6 +38,13 @@ router.get('/langData/:lang/:data', async (req, res) => {
     const lang = req.params.lang
     const data = req.params.data
     res.json(await HHController.getLangData(lang, data))
+});
+
+router.get('/dataRegion/:data/:region', async (req, res) => {
+    ///device-management/managed-devices?region=USA&brand=XYZ
+    const data = req.params.data
+    const region = req.params.region
+    res.json(await HHController.getDataRegion(data, region))
 });
 
 

@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
 
 router.get('/hh', async (req, res) => {
     const resHH = await parserController.getParserHH()
-    console.log(resHH)
+    //console.log(resHH)
     res.json(resHH)
 });
 
