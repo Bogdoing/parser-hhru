@@ -7,8 +7,8 @@ import { Pool } from 'pg'
 const pool = new Pool({
   user: 'postgres',
   host: 'localhost',
-  database: 'StatsHH',
-  password: 'postgres',
+  database: 'postgres', //StatsHH
+  password: '1234',
   port: 5432, // или порт, указанный в вашей настройке PostgreSQL
 });
 
