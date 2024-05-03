@@ -1,6 +1,6 @@
 # CRUD REST API for parsing data from the site hh.ru
 
-## Instructions for creating and connecting a database
+### Instructions for creating and connecting a database
 
 [DBSCRIPT](/DBSCRIPT.md)
 
@@ -11,6 +11,22 @@ How to use this template:
 ```sh
 npx create-express-api --typescript --directory my-api-name
 ```
+
+---
+
+Scripts npm:
+
+```
+Setup       - npm install
+
+Lint        - npm run lint
+
+Test        - npm run test
+
+Development - npm run dev
+```
+
+---
 
 Includes API Server utilities:
 
@@ -39,27 +55,3 @@ Development utilities:
   - Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
 - [supertest](https://www.npmjs.com/package/supertest)
   - HTTP assertions made easy via superagent.
-
-## Setup
-
-```
-npm install
-```
-
-## Lint
-
-```
-npm run lint
-```
-
-## Test
-
-```
-npm run test
-```
-
-## Development
-
-```
-npm run dev
-```
