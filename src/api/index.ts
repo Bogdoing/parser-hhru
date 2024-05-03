@@ -16,7 +16,7 @@ router.get<{}, MessageResponse>('/', (req, res) => {
 });
 
 router.use('/emojis', emojis);
-router.use('/test', test);
+router.use('/test', test); // -
 router.use('/parser', parser);
 router.use('/hh', hh);
 router.use('/git', git);

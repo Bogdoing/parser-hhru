@@ -1,8 +1,12 @@
-# CRUD REST API for parsing data from the site hh.ru
+## CRUD REST API for parsing data from the site hh.ru
 
-### Instructions for creating and connecting a database
+#### Instructions for creating and connecting a database
 
 [DBSCRIPT](/DBSCRIPT.md)
+
+#### Instructions for project routes
+
+[ROUTE](/ROUTE.md)
 
 ---
 
