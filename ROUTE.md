@@ -32,7 +32,7 @@ http://localhost:5000/api/v1/
 
 - /api/v1/hh/langData/:lang/:data - (/api/v1/hh/langData/php/2024-03-19) -> получить все записи определённого языка за определённую дату
 
-- /api/v1/hh/dataRegion/:data/:region - (/api/v1/hh//dataRegion/2024-03-19/113) -> получить все записи за определённую дату в регионе
+- /api/v1/hh/dataRegion/:data/:region - (/api/v1/hh/dataRegion/2024-03-19/113) -> получить все записи за определённую дату в регионе
 
 ---
 

@@ -12,10 +12,13 @@ router.get('/allData', async (req, res) => {
     res.json(await HHController.getAllData())
 });
 
+router.get('/allLang', async (req, res) => {
+    res.json(await HHController.getAllLang())
+});
+
 router.get('/data/:data', async (req, res) => {
     const data = req.params.data
     res.json(await HHController.getData(data))
-    // res.json(data)
 });
 
 router.get('/lang/:lang', async (req, res) => {
