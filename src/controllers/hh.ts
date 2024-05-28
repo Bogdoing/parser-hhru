@@ -29,6 +29,18 @@ const HHController = {
             return { error }
         }
     },
+    getAllRegion: async(): Promise<{}>  => {
+        try {
+            const { rows } = await postgre.query("SELECT DISTINCT region FROM hh;", [])
+            
+            if (rows[0]) { return { rows } }
+
+            return { msg: "not found" }
+
+        } catch (error) {
+            return { error }
+        }
+    },
     getAllData: async(): Promise<{}>  => {
         try {
             const { rows } = await postgre.query(`
